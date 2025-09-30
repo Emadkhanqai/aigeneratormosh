@@ -3,8 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\" --names \"server,client\" --prefix-colors \"blue,green\"",
+    "dev:server": "cd packages/server && bun run dev",
+    "dev:client": "cd packages/client && bun run dev"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "concurrently": "^9.1.2"
   },
   "peerDependencies": {
     "typescript": "^5"

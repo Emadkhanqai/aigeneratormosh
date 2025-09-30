@@ -13,7 +13,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/api/hello", (req: Request, res: Response) => {
   res.json({
-    'message':'Hello from the backend 2!'
+    'message':'Hello from the backend 3!'
   });
 });
 
