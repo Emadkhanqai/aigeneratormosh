@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo $OPENAI_API_KEY)",
+      "Bash(OPENAI_API_KEY=1234 bun run index.ts)",
+      "Bash(curl http://localhost:3000)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

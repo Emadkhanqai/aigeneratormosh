@@ -1,0 +1,16 @@
+import express  from "express";
+import type { Request, Response } from "express";
+import dotenv from "dotenv";
+
+// this loads env variables from the .env file
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.get("/", (req: Request, res: Response) => {
+  res.send(process.env.OPENAI_API_KEY || "No API Key Set");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
